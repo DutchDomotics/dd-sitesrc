@@ -44,3 +44,4 @@ jobs:
          external_repository: DutchDomotics/dutchdomotics.info
          publish_branch: main
          publish_dir: ./public
+         cname: www.dutchdomotics.info
