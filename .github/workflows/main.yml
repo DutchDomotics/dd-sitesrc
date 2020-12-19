@@ -23,16 +23,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-         node-version: '12'
+          node-version: '12'
 
-      #- name: Cache dependencies
-      #  uses: actions/cache@v2
-      #  with:
-      #    path: ~/.npm
-      #    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      #    restore-keys: |
-      #      ${{ runner.os }}-node-
-     
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - run: npm ci
       - run: hugo --minify
@@ -40,8 +39,8 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-         deploy_key: ${{ secrets.hugo_deployment_key }}
-         external_repository: DutchDomotics/dutchdomotics.info
-         publish_branch: main
-         publish_dir: ./public
-         cname: www.dutchdomotics.info
+          deploy_key: ${{ secrets.hugo_deployment_key }}
+          external_repository: DutchDomotics/dutchdomotics.info
+          publish_branch: main
+          publish_dir: ./public
+          cname: www.dutchdomotics.info
