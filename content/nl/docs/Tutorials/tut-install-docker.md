@@ -1,0 +1,43 @@
+---
+title: "Docker + Docker-Compose"
+date: 2020-12-20
+weight: 3
+description: >
+  Docker samen met Docker-Compose installeren.
+---
+
+{{% pageinfo %}}
+LET OP: Deze tutorial is gebaseerd op Ubuntu 18.04 & 20.04
+{{% /pageinfo %}}
+
+Eerst installeren we Docker d.m.v. het convenience script.
+
+
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+
+Voeg je user toe aan de "docker" group zodat je niet elke keer sudo hoeft in te typen.
+
+```
+sudo usermod -aG docker <user>
+```
+
+Daarna installeren we Docker-Compose
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
+Test de instalatie:
+
+```
+docker-compose --version
+```
+
+Als je output lijkt op ``docker-compose version 1.27.4, build 01110ad01`` zit je goed.
+
+Gefeliciteerd! Je hebt nu Docker en Docker-Compose draaien en bent klaar voor de mooie wereld van het selfhosten.
