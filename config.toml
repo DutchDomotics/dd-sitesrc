@@ -6,7 +6,7 @@ theme = "docsy"
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
-
+enableEmoji = true
 # Language settings
 contentDir = "content/nl"
 defaultContentLanguage = "nl"
@@ -112,7 +112,7 @@ github_project_repo = "https://github.com/DutchDomotics/dutchdomotics.info"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
-
+github_branch = "main"
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 gcs_engine_id = "011737558837375720776:fsdu1nryfng"
 
