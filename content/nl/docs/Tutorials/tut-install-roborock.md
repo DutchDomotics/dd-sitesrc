@@ -13,12 +13,13 @@ LET OP: Deze tutorial is gebaseerd op RoboRock S5 Max firmware 01.10.26 en Home 
 {{% /pageinfo %}}
 
 ## Gebruikte bronnen:
+Home Assistant Vacuum integratie: https://www.dutchdomotics.info/docs/tutorials/roborock-s5-max-homeassistant-zonder-root/
+
 Gain root on BlueStacks: https://android.stackexchange.com/questions/224119/how-to-gain-root-on-bluestacks-android-emulator
 
 Github Repository: https://github.com/89jd/hass-roborock
 
 BlueStacks Android emulator: https://www.bluestacks.com/
-
 > :warning: **Dit is geen volledige Home Assistant ondersteunde integratie, maak altijd backups voor je begint.**
 
 ## Globale stappen
@@ -156,6 +157,29 @@ Om de stofzuiger zichtbaar te krijgen, heeft deze de NPM module nodig die normaa
 ```apk add --update nodejs npm```
 Deze actie moet je na elke stop en start van de home assistant container doen. Niet bij de standaard "restart". Er zijn ook methodes om dit ook nog te automatiseren, zie bijvoorbeeld https://community.home-assistant.io/t/custom-component-roborock-communication/229032/34, maar die heb ik niet verder onderzocht omdat ik nog te onervaren ben in Home Assistant en wil voorkomen dat ik de container permanent beschadig.
 
-Wanneer je nu in HA naar de HA integrations gaat (dus niet HACS), kun je daar de RoboRock integratie toevoegen. Deze vraagt vervolgens om de naam, IP, localKey en devID. De naam die je hier in vult is de naam zoals deze straks als entity beschikbaar komt.
+Wanneer je nu in HA naar de HA integrations gaat (dus niet HACS), kun je daar de RoboRock integratie toevoegen. Deze vraagt vervolgens om de naam, IP, localKey en devID. De naam die je hier in vult is de naam zoals deze straks als entity beschikbaar komt. In het voorbeeld heb ik als naam "roborock s5 max" gebruikt, wat later zichtbaar is als "roborock_s5_max" als entity.
 
 Ga in HA naar configuration -> entities. The RoboRock verschijnt hier nu als een entity.
+
+## Aansturen RoboRock
+Om de RoboRock aan te sturen heb je nu de beschikking over een aantal services die je kunt aanroepen. Deze staan uitvoerig beschreven in https://www.home-assistant.io/integrations/vacuum/. Om te testen of de RoboRock aan te sturen is, ga je naar HA -> Developer Tools -> Services. Kies hier de service "vacuum.start" en als service data:
+```
+entity_id: vacuum.roborock_s5_max
+```
+Als je nu op "Call Service" klikt, moet de RoboRock al gaan beginnen. Dit is het bewijs dat de integratie gelukt is.
+
+## Kamers in RoboRock aanduiden
+Via de RoboRock app kun je een enkele of meerdere rooms aanduiden om te stofzuigen. Als je dit vanuit Home Assistant wilt doen, dan worden deze aangeduid als segmenten. Momenteel is er nog geen mogelijkheid om de segmenten die beschikbaar zijn uit te lezen, dus zul je moeten testen welke segment ID overeenstemt met welke kamer. De segment IDs beginnen vanaf id 15. 
+Ga weer naar HA -> Developer Tools -> Services en selecteer "roborock.vacuum_clean_segment". Voor de service data vul je in:
+```
+segments:
+  - 15
+entity_id: vacuum.roborock_s5_max
+```
+Voordat je op "Call Service" klikt, open je de RoboRock App en kijk naar de plattegrond. Klik nu op "call service". Hopelijk springt de RoboRock nu aan en zie je na enkele seconden in de App de kamer kleuren die gezogen gaat worden. Op deze manier test je dus kamer voor kamer, tot je ze allemaal gevonden hebt.
+Wil je later in een automation meerdere segmenten aanspreken, dan kan dit als volgt:
+```
+segments:
+  - 20
+  - 22
+```
