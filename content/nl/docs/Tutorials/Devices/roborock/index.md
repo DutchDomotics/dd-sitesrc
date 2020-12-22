@@ -7,6 +7,8 @@ author: Gabrie van Zanten
 description: >
   Installatie van RoboRock S5 Max stofzuiger in Home Assistant zonder rooting van de stofzuiger.
 ---
+{{< imgproc gab001 Resize "1700x" >}}
+{{< /imgproc >}}
 
 {{% pageinfo %}}
 LET OP: Deze tutorial is gebaseerd op RoboRock S5 Max firmware 01.10.26 en Home Assistant OS 2020.12.1 en uitgevoerd op MacOS.
@@ -47,7 +49,7 @@ In MacOS open een terminal venster en edit de file: "~/Library/BlueStacks/Androi
 Sla de wijzigingen op, laat je terminal window nog even open, daar komen we dadelijk nog terug. In MacOS start BlueStacks en volg onderstaande stappen:
 1) In BlueStacks installeer je de RoboRock app via de playstore
 2) Log in de RoboRock app in met hetzelfde account als de RoboRock app op je telefoon. Je moet nu je stofzuiger ook in BlueStacks kunnen zien.
-3) In de BlueStacks app enable je de Android Debug Bridge (ADB) via BlueStacks Preferences -> Perferences.
+3) In de BlueStacks app enable je de Android Debug Bridge (ADB) via BlueStacks Preferences -> Perferences. {{< imgproc roborock001 Resize "600x" >}}{{< /imgproc >}}
 4) In je MacOS terminal ga je naar de BlueStacks directory via:
 ```bash
 cd /Applications/BlueStacks.app/Contents/MacOS
@@ -113,7 +115,7 @@ chmod a+rwx /system/xbin/su
 ```
 
 12) In BlueStacks is nu de SU daemon geinstalleerd. Waarschijnlijk is de BlueStacks sessie vastgelopen en moet je bluestacks opnieuw opstarten.
-13) Na opnieuw starten van BlueStacks zoek je de SuperSU in BlueStacks op en Controleer of deze actief is.
+13) Na opnieuw starten van BlueStacks zoek je de SuperSU in BlueStacks op en Controleer of deze actief is. {{< imgproc roborock002 Resize "600x" >}}SuperUser.apk{{< /imgproc >}}
 14) switch naar de MacOS terminal en start opnieuw de shell op en switch naar su. Het kan zijn dat je weer eerst stap 7 & 8 moet uitvoer om BlueStacks in de device emulator te zien.
 ```bash
 ./adb shell
@@ -151,12 +153,17 @@ In Home Assistant ga je naar HACS, dan naar integrations en klik rechtsboven op 
 ```bash
 https://github.com/89jd/hass-roborock
 ```
+{{< imgproc roborock003 Resize "600x" >}}{{< /imgproc >}}
+{{< imgproc roborock004 Resize "600x" >}}{{< /imgproc >}}
+
 Herstart Home Assistant.
 
 Om de stofzuiger zichtbaar te krijgen, heeft deze de NPM module nodig die normaal niet in Home Assistant zit. Om deze te installeren op een HA OS gebaseerde installatie, op je de homeassistant container (ik gebruik hier portainer voor) en run het commando:
 ```bash
 apk add --update nodejs npm
 ```
+{{< imgproc roborock005 Resize "600x" >}}{{< /imgproc >}}
+
 Deze actie moet je na elke stop en start van de home assistant container doen. Niet bij de standaard "restart". Er zijn ook methodes om dit ook nog te automatiseren, zie bijvoorbeeld https://community.home-assistant.io/t/custom-component-roborock-communication/229032/34, maar die heb ik niet verder onderzocht omdat ik nog te onervaren ben in Home Assistant en wil voorkomen dat ik de container permanent beschadig.
 
 Wanneer je nu in HA naar de HA integrations gaat (dus niet HACS), kun je daar de RoboRock integratie toevoegen. Deze vraagt vervolgens om de naam, IP, localKey en devID. De naam die je hier in vult is de naam zoals deze straks als entity beschikbaar komt. In het voorbeeld heb ik als naam "roborock s5 max" gebruikt, wat later zichtbaar is als "roborock_s5_max" als entity.
@@ -168,6 +175,7 @@ Om de RoboRock aan te sturen heb je nu de beschikking over een aantal services d
 ```yaml
 entity_id: vacuum.roborock_s5_max
 ```
+{{< imgproc roborock006 Resize "600x" >}}{{< /imgproc >}}
 Als je nu op "Call Service" klikt, moet de RoboRock al gaan beginnen. Dit is het bewijs dat de integratie gelukt is.
 
 ## Kamers in RoboRock aanduiden
@@ -178,6 +186,7 @@ segments:
   - 15
 entity_id: vacuum.roborock_s5_max
 ```
+{{< imgproc roborock007 Resize "600x" >}}{{< /imgproc >}}
 Voordat je op "Call Service" klikt, open je de RoboRock App en kijk naar de plattegrond. Klik nu op "call service". Hopelijk springt de RoboRock nu aan en zie je na enkele seconden in de App de kamer kleuren die gezogen gaat worden. Op deze manier test je dus kamer voor kamer, tot je ze allemaal gevonden hebt.
 Wil je later in een automation meerdere segmenten aanspreken, dan kan dit als volgt:
 ```yaml
