@@ -18,7 +18,7 @@ Docker-compose: https://docs.docker.com/compose/install/
 ## Docker
 Eerst installeren we Docker d.m.v. het convenience script.
 
-```
+```shell
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
@@ -27,13 +27,13 @@ Voeg je user toe aan de "docker" group zodat je niet elke keer sudo hoeft in te 
 
 
 
-```
+```shell
 sudo usermod -aG docker <user>
 ```
 
 ## Docker-Compose
 
-Daarna installeren we Docker-Compose
+Daarna installeren we Docker-Compose. (:warning: let op de versie hieronder kan verouderd zijn, ga naar de link bovenin het artikel voor de nieuwste versie :warning: )
 
 ```shell
 sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose  
