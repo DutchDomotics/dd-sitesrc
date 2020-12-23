@@ -1,5 +1,6 @@
 ---
 title: "RoboRock S5 Max in HA zonder root"
+linkTitle: "RoboRock S5 Max"
 date: 2020-12-20
 weight: 3
 slug: roborock-s5-max-homeassistant-zonder-root
