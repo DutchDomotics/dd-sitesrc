@@ -13419,10 +13419,10 @@ readers do not read off random characters that represent icons */
 
 .td-content pre {
   word-wrap: normal;
-  background-color: #f8f9fa;
+  background-color: #1d1f21 !important;
   padding: 1rem; }
   .td-content pre > code {
-    background-color: inherit !important;
+    background-color: #1d1f21 !important;
     padding: 0;
     margin: 0;
     font-size: 100%;

@@ -33,12 +33,12 @@
     // Code blocks
     pre {
         word-wrap: normal;
-        background-color: $gray-100;
+        background-color: #1d1f21 !important;
         padding: $spacer;
      
 
         > code {
-	    background-color: inherit !important;
+	        background-color: #1d1f21 !important;
             padding: 0;
             margin: 0;
             font-size: 100%;
