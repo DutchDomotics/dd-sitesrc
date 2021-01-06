@@ -1,4 +1,3 @@
-
 ---
 title: "ESPHome"
 linkTitle: "ESPHome"
@@ -15,4 +14,5 @@ This is a placeholder page that shows you how to use this template site.
 {{% /pageinfo %}}
 
 ## ESPHome
-Kort stukje text over ESPhome 
+
+Kort stukje text over ESPhome

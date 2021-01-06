@@ -32,14 +32,13 @@ On big screens, paragraphs and headings should not take up the full container wi
 
 Scenester tumeric pickled, authentic crucifix post-ironic fam freegan VHS pork belly 8-bit yuccie PBR&B. **I love this life we live in**.
 
-
 ## Second Header 2
 
 > This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
 
 ### Header 3
 
-```
+```text
 This is a code block following a header.
 ```
 
@@ -103,6 +102,7 @@ And a nested list:
   * Jackie
   * Marlon
   * Jermaine
+
 * TMNT
   * Leonardo
   * Michelangelo
@@ -122,7 +122,6 @@ Birthplace
 
 Color
 : Green
-
 
 ----------------
 
@@ -150,7 +149,7 @@ Also, `this should vertically align` ~~`with this`~~ ~~and this~~.
 
 Code can also be shown in a block element.
 
-```
+```text
 foo := "bar";
 bar := "foo";
 ```
@@ -173,7 +172,7 @@ func main() {
 }
 ```
 
-```
+```text
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```
 
@@ -196,7 +195,6 @@ Large images should always scale down and fit in the content container.
 
 _The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA._
 
-
 ## Components
 
 ### Alerts
@@ -207,6 +205,5 @@ _The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik 
 {{< alert color="success" >}}This is a successful alert.{{< /alert >}}
 {{< alert color="warning" >}}This is a warning.{{< /alert >}}
 {{< alert color="warning" title="Warning" >}}This is a warning with a title.{{< /alert >}}
-
 
 ## Another Heading

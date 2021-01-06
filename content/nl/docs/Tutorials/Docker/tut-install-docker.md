@@ -10,12 +10,13 @@ description: >
 > :warning: **Controleer altijd het script voordat je het installeert!**  
 > :warning: **Deze tutorial is gebaseerd op Ubuntu 18.04 & 20.04!**
 
-## Volledige documentatie installatie Docker: 
+## Volledige documentatie installatie Docker
+
 Docker: https://docs.docker.com/engine/install/ubuntu/  
 Docker-compose: https://docs.docker.com/compose/install/
 
-
 ## Docker
+
 Eerst installeren we Docker d.m.v. het convenience script.
 
 ```shell
@@ -24,8 +25,6 @@ sudo sh get-docker.sh
 ```
 
 Voeg je user toe aan de "docker" group zodat je niet elke keer sudo hoeft in te typen.
-
-
 
 ```shell
 sudo usermod -aG docker <user>
@@ -48,7 +47,6 @@ docker-compose --version
 ```
 
 Als je output lijkt op ``docker-compose version 1.27.4, build 01110ad01`` zit je goed.
-
 
 :tada::tada::tada:  
 Gefeliciteerd! Je hebt nu Docker en Docker-Compose draaien en bent klaar voor de mooie wereld van het selfhosten.  

@@ -7,5 +7,5 @@ description: >
   Hoe installeer en configureer je Home Assistant op een Raspberry Pi
 ---
 
-> :warning: **PLACEHOLDER**  
+> :warning: **PLACEHOLDER**
 > :warning: **PLACEHOLDER**

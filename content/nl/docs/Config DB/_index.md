@@ -1,4 +1,3 @@
-
 ---
 title: "Config DB"
 linkTitle: "Config DB"
@@ -15,6 +14,7 @@ This is a placeholder page that shows you how to use this template site.
 {{% /pageinfo %}}
 
 ## Configuratie DB
+
 Oke niet echt een Database maar een verzameling configuraties voor diverse systemen en technieken  
 Hier vind je bijvoorbeeld verschillende configuraties voor Shelly's met ESPHome Firmware, of Automations van HA etc
 Maar ook eventueel Docker (Compose) files
