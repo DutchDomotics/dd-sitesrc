@@ -4,7 +4,8 @@
   "description": "Hugo theme for technical documentation.",
   "main": "none.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "markdown:lint": "remark --quiet --frail ."
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,13 @@
     "url": "https://github.com/google/docsy-example/issues"
   },
   "homepage": "https://github.com/google/docsy-example#readme",
-  "dependencies": {},
+  "dependencies": {
+    "remark-cli": "^9.0.0",
+    "remark-frontmatter": "^3.0.0",
+    "remark-lint": "^8.0.0",
+    "remark-lint-no-dead-urls": "^1.1.0",
+    "remark-preset-lint-markdown-style-guide": "^4.0.0"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "postcss-cli": "^7.1.2"

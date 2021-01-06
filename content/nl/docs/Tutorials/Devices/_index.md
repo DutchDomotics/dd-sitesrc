@@ -1,4 +1,3 @@
-
 ---
 title: "Device Hacks"
 linkTitle: "Devices"

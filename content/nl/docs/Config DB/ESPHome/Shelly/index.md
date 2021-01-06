@@ -19,5 +19,3 @@ The front matter specifies the date of the blog post, its title, a short descrip
 
 Here's an image that includes a byline and a caption.
 at the size and byline specified in the front matter.
-
-

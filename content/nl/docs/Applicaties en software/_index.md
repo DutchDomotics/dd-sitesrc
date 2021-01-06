@@ -1,4 +1,3 @@
-
 ---
 title: "Applicaties en software"
 linkTitle: "Applicaties en software"
@@ -11,4 +10,3 @@ description: >
 {{% pageinfo %}}
 This is a placeholder page that shows you how to use this template site.
 {{% /pageinfo %}}
-

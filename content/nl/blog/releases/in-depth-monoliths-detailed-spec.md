@@ -1,4 +1,3 @@
-
 ---
 title: "Another Great Release"
 linkTitle: "Release New Features"
@@ -23,8 +22,6 @@ There should be whitespace between paragraphs. There should be whitespace betwee
 
 This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.  Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.  Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
 
-
-
 Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
 
 On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.
@@ -42,7 +39,7 @@ Dixi ad aestum.
 
 ### Header 3
 
-```
+```text
 This is a code block following a header.
 ```
 
@@ -104,6 +101,7 @@ And a nested list:
   * Jackie
   * Marlon
   * Jermaine
+
 * TMNT
   * Leonardo
   * Michelangelo
@@ -123,7 +121,6 @@ Birthplace
 
 Color
 : Green
-
 
 ----------------
 
@@ -151,7 +148,7 @@ Also, `this should vertically align` ~~`with this`~~ ~~and this~~.
 
 Code can also be shown in a block element.
 
-```
+```text
 foo := "bar";
 bar := "foo";
 ```
@@ -174,7 +171,7 @@ func main() {
 }
 ```
 
-```
+```text
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```
 
@@ -204,7 +201,6 @@ Large images should always scale down and fit in the content container.
 {{< alert type="success" >}}This is a successful alert.{{< /alert >}}
 {{< alert type="warning" >}}This is a warning!{{< /alert >}}
 {{< alert type="warning" title="Warning!" >}}This is a warning with a title!{{< /alert >}}
-
 
 ## Sizing
 
@@ -238,8 +234,6 @@ Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta ch
 
 Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
 
-
-
-```
+```text
 This is the final element on the page and there should be no margin below this.
 ```
