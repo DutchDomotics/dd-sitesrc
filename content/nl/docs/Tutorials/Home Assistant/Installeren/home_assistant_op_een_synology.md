@@ -1,5 +1,5 @@
 ---
-title: "Home Assistant installeren op een Synology NAS"
+title: "HA - Synology NAS"
 date: 2020-12-20
 weight: 3
 slug: ha-installeren-synology

@@ -1,8 +1,8 @@
 ---
-title: "Home Assistant installeren op een Raspberry Pi"
+title: "HA - Raspberry Pi"
 date: 2020-12-20
 weight: 3
-slug: ha-installeren-Pi
+slug: ha-installeren-pi
 description: >
   Hoe installeer en configureer je Home Assistant op een Raspberry Pi
 ---

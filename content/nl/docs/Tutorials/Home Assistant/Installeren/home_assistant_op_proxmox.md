@@ -1,5 +1,5 @@
 ---
-title: "Home Assistant installeren op Proxmox"
+title: "HA - Proxmox"
 date: 2020-12-20
 weight: 3
 slug: ha-installeren-proxmox
