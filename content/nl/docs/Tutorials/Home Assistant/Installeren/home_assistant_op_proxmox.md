@@ -7,5 +7,4 @@ description: >
   Hoe installeer en configureer je Home Assistant op Proxmox
 ---
 
-> :warning: **PLACEHOLDER**
-> :warning: **PLACEHOLDER**
+> :warning: **Ons advies is altijd de officiële installatie instructies op de site van Home Assistant te volgen https://www.home-assistant.io/hassio/**  
