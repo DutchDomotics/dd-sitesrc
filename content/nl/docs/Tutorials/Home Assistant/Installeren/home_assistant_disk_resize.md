@@ -20,8 +20,8 @@ Naar mate je Home Assistant meer en meer gebruikt en er ook meer logging in gesc
 ```
 
 Wanneer je Home Assistant OS draait in een VM, is de oplossing gelukkig heel simpel:
-1) Resize de disk
-2) Herstart Home Assisant OS.
+1. Resize de disk
+2. Herstart Home Assisant OS.
 
 ## Resizen van de disk
 Wanneer je gebruik maakt van VMware ESXi of Hyper-V, dan selecteer je de VM, gaat naar de eigenschappen van de disk en vergroot de disk naar de nieuwe waarde. Wanneer je nu Home Assistant herstart, zal deze automatisch de nieuwe disk size herkennen en de partitie vergroten tot de nieuwe maximale grootte.
@@ -31,4 +31,3 @@ Gebruik je ProxMox dan voltstaat het om op de command line de uitbreiding op te 
 ## Controle
 Om te controleren of de nieuwe disksize goed verwerkt is, log je in op de console van de Home Assistant OS VM. Login met de user root, er wordt geen wachtwoord gevraagd.
 Type nu ```login``` om op de command line te komen en controleer dan via ```fdisk -l``` of de disk de nieuwe grootte heeft en of /dev/sda8 op een paar MB na, ook de nieuwe grootte heeft.
-
