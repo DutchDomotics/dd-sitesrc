@@ -1,5 +1,5 @@
 ---
-title: "HA - Raspberry Pi"
+title: "Raspberry Pi"
 date: 2020-12-20
 weight: 3
 slug: ha-installeren-pi

@@ -1,5 +1,5 @@
 ---
-title: "HA - Proxmox"
+title: "Proxmox"
 date: 2020-12-20
 weight: 3
 slug: ha-installeren-proxmox
