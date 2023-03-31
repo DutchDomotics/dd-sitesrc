@@ -37,7 +37,7 @@ jobs:
       - run: hugo --minify
         
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.8.0
+        uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           deploy_key: ${{ secrets.hugo_deployment_key }}
           external_repository: DutchDomotics/dutchdomotics.info
